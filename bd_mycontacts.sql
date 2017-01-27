@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-01-2017 a las 18:14:06
+-- Tiempo de generación: 27-01-2017 a las 15:47:44
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -51,7 +51,8 @@ CREATE TABLE `tbl_contacts` (
 CREATE TABLE `tbl_users` (
   `usuario` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `password` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
-  `recovery` varchar(20) COLLATE utf8_spanish_ci NOT NULL
+  `recovery` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `answ_recovery` varchar(1) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
