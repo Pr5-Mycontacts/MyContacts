@@ -22,7 +22,7 @@
 <!-- Button Mixin-->
 <!-- Pen Title-->
 <div class="pen-title">
-  <h1><a href="index.html"><img class="logo" src="img/MyContactsLogo.png">   My Contacts</h1></a>
+  <h1><a href="index.php"><img class="logo" src="img/MyContactsLogo.png">   My Contacts</h1></a>
 
 </div>
 <!-- Form Module-->

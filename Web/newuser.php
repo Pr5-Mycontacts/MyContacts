@@ -36,7 +36,7 @@
 </head>
 <body>
 	<div class="pen-title">
-	<h1><a href="index.html"><img class="logo" src="img/MyContactsLogo.png">  My Contacts</h1></a>
+	<h1><a href="index.php"><img class="logo" src="img/MyContactsLogo.png">  My Contacts</h1></a>
 	</div>
 
 
@@ -50,8 +50,8 @@
     	
 		<input type="text" name="nombre" id="nombre" placeholder="Nombre" onfocus="document.formulario.nombre.style.borderColor='';"/>
 		<input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" onfocus="document.formulario.apellidos.style.borderColor='';"/>
-		<input type="email" name="email1" id="correo_personal" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" placeholder="Email Personal"/>
-		<input type="email" name="email2" id="correo_profesional" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" placeholder="Email Profesional"/>
+		<input type="email" name="correo_personal" id="correo_personal" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" placeholder="Email Personal"/>
+		<input type="email" name="correo_profesional" id="correo_profesional" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" placeholder="Email Profesional"/>
 		<input type="tel" name="telf_personal" pattern="[0-9]{9}" placeholder="Teléfono Personal"/>
 		<input type="tel" name="telf_profesional" pattern="[0-9]{9}" placeholder="Teléfono Profesional"/>
 		<select name="tipo_contacto" id="tipo_contacto" required>

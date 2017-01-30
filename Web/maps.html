@@ -26,7 +26,8 @@
     <body>
     <div id="map"></div>
     <form name="formulariomapa" action="maps.proc.php" method="GET" >
-    <input type="text" id="coords" />
+    <input type="text" id="lati" placeholder="latitude" />
+    <input type="text" id="long" placeholder="longitude">
     <input type="submit" value="Guardar">
     </form>
     <script>
@@ -82,7 +83,8 @@ function setMapa (coords)
       marker.addListener( 'dragend', function (event)
       {
         //escribimos las coordenadas de la posicion actual del marcador dentro del input #coords
-        document.getElementById("coords").value = this.getPosition().lat()+","+ this.getPosition().lng();
+        document.getElementById("lati").value = this.getPosition().lat()
+        document.getElementById("long").value = this.getPosition().lng();
       });
 }
 
