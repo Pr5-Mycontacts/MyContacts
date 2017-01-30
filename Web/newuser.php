@@ -34,6 +34,21 @@
 
 
 </head>
+<?php
+session_start();
+//session_destroy();
+if(isset($_SESSION['usuario'])){
+  echo "Bienvenido";
+  echo " " . $_SESSION['usuario'];
+
+  echo "<br><a href='home.php'><i class='fa fa-angle-left fa-2x' aria-hidden='true' title='Atras'></i></a><br/>";
+  echo "<a href='cerrar_sesion.php'><i class='fa fa-sign-out fa-2x' aria-hidden='true' title='Logout'></i></a><br/>";
+  
+}
+else{
+  header("Location: index.php");
+}
+?>
 <body>
 	<div class="pen-title">
 	<h1><a href="index.php"><img class="logo" src="img/MyContactsLogo.png">  My Contacts</h1></a>
