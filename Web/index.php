@@ -23,8 +23,9 @@ session_start();
 $usuario = $_POST["usuario"];
 $password = $_POST["password"];
 include ("conexion.php");
-
-if (!isset($conexion)){
+if(!$conexion) {
+header("Location: error.html");
+}
 	$proceso = $conexion->query("SELECT * FROM tbl_users WHERE usuario='$usuario' AND password='$password'");
 	if(mysqli_num_rows($proceso)==1){
 	//if($resultado = mysqli_fetch_array($proceso)){
@@ -36,11 +37,6 @@ if (!isset($conexion)){
 	if(isset($usuario))
 	  echo'<div class="error"> Usuario incorrecto</div>';
 	}
-
-}else{
-		header("Location: error.html");
-	exit;
-}
 ?>
 
 <body>
