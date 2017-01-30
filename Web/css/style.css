@@ -18,6 +18,20 @@ body {
   margin: 10px;
   text-align: center;
 }
+.error-div {
+  position: relative;
+  background: #ffffff;
+  max-width: 500px;
+  width: 100%;
+  border-top: 5px solid #3297ec;
+  box-shadow: 0 0 3 px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+h3 {
+  font-size: 25px;
+  padding-bottom: 10px; 
+  font-weight: bold; 
+}
 /*Link styling*/
 A:link {text-decoration:none;color:#666666;} 
 
