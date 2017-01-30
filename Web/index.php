@@ -63,7 +63,7 @@ if(isset($usuario))
   </div>
   <div class="form">
     <h2>Crear una cuenta</h2>
-    <form action="newuser.php" method="POST">
+    <form action="registro.proc.php" method="POST">
       <input type="email" placeholder="Email"/>
       <input type="password" placeholder="Contraseña"/>
       <input type="password" placeholder="Repite la contraseña"/>
