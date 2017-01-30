@@ -11,10 +11,6 @@ body {
     margin-bottom: -0.05em;
     width: 40px;
 }
-/*Map input*/
-.input-map{
-  width: 250px;
-}
 
 /*Link styling*/
 A:link {text-decoration:none;color:#666666;} 
