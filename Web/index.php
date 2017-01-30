@@ -2,7 +2,6 @@
 <html >
 
 <head>
-
   <meta charset="UTF-8">
   <title>My contacts</title>
   
@@ -15,8 +14,8 @@
 
   
 </head>
-
 <?php
+
 error_reporting(0);
 session_start();
 
@@ -25,18 +24,23 @@ $usuario = $_POST["usuario"];
 $password = $_POST["password"];
 include ("conexion.php");
 
-$proceso = $conexion->query("SELECT * FROM tbl_users WHERE usuario='$usuario' AND password='$password'");
-if(mysqli_num_rows($proceso)==1){
-//if($resultado = mysqli_fetch_array($proceso)){
-  $_SESSION['usuario'] = $usuario;
-  header("Location: home.php");
-  
-}
-else{
-if(isset($usuario))
-  echo'<div class="error"> Usuario incorrecto</div>';
-}
+if (!isset($conexion)){
+	$proceso = $conexion->query("SELECT * FROM tbl_users WHERE usuario='$usuario' AND password='$password'");
+	if(mysqli_num_rows($proceso)==1){
+	//if($resultado = mysqli_fetch_array($proceso)){
+	  $_SESSION['usuario'] = $usuario;
+	  header("Location: home.php");
+	  
+	}
+	else{
+	if(isset($usuario))
+	  echo'<div class="error"> Usuario incorrecto</div>';
+	}
 
+}else{
+		header("Location: error.html");
+	exit;
+}
 ?>
 
 <body>
@@ -65,16 +69,16 @@ if(isset($usuario))
   <div class="form">
     <h2>Crear una cuenta</h2>
     <form action="registro.proc.php" method="POST">
-      <input name ="usuario" id="usuario" type="email" placeholder="Email"/>
-      <input name ="password" type="password" placeholder="Contraseña"/>
+      <input type="email" placeholder="Email"/>
+      <input type="password" placeholder="Contraseña"/>
       <input type="password" placeholder="Repite la contraseña"/>
-      <select name="answ_recovery" name="recovery_question">
+      <select name="recovery_question">
       <option value="" disabled selected hidden>Pregunta de seguridad</option>
       <option value="1">¿Cual es tu color favorito?</option>
       <option value="2">¿Cual era el nombre de tu mejor amigo en la infancia?</option>
       <option value="3">¿Cual fue el nombre de tu primera mascota?</option>
       </select>
-      <input name ="recovery" type="text" placeholder="Respuesta"/>
+      <input type="text" placeholder="Respuesta"/>
       <button>Registrarse</button>
     </form>
   </div>
