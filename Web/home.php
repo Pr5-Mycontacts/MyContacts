@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-<link rel="import" href="favicon.html">
+
   <meta charset="UTF-8">
   <title>My contacts</title>
   
@@ -14,6 +14,23 @@
 
   
 </head>
+
+
+<?php
+session_start();
+//session_destroy();
+if(isset($_SESSION['usuario'])){
+  echo "Bienvenido";
+  echo " " . $_SESSION['usuario'];
+
+  
+  echo "<br><a href='cerrar_sesion.php'><i class='fa fa-sign-out fa-2x' aria-hidden='true' title='Logout'></i></a><br/>";
+  
+}
+else{
+  header("Location: index.php");
+}
+?>
 
 <body>
   

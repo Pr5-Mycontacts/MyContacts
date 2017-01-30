@@ -2,7 +2,7 @@
 <html >
 
 <head>
-<link rel="import" href="favicon.html">
+
   <meta charset="UTF-8">
   <title>My contacts</title>
   
@@ -15,6 +15,7 @@
 
   
 </head>
+
 <?php
 error_reporting(0);
 session_start();
@@ -64,16 +65,16 @@ if(isset($usuario))
   <div class="form">
     <h2>Crear una cuenta</h2>
     <form action="registro.proc.php" method="POST">
-      <input type="email" placeholder="Email"/>
-      <input type="password" placeholder="Contraseña"/>
+      <input name ="usuario" id="usuario" type="email" placeholder="Email"/>
+      <input name ="password" type="password" placeholder="Contraseña"/>
       <input type="password" placeholder="Repite la contraseña"/>
-      <select name="recovery_question">
+      <select name="answ_recovery" name="recovery_question">
       <option value="" disabled selected hidden>Pregunta de seguridad</option>
       <option value="1">¿Cual es tu color favorito?</option>
       <option value="2">¿Cual era el nombre de tu mejor amigo en la infancia?</option>
       <option value="3">¿Cual fue el nombre de tu primera mascota?</option>
       </select>
-      <input type="text" placeholder="Respuesta"/>
+      <input name ="recovery" type="text" placeholder="Respuesta"/>
       <button>Registrarse</button>
     </form>
   </div>

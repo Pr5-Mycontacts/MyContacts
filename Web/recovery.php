@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-<link rel="import" href="favicon.html">
+
   <meta charset="UTF-8">
   <title>My contacts</title>
   
