@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html >
 <head>
-
+<?php
+include ("conexion.php");
+?>
   <meta charset="UTF-8">
   <title>My contacts</title>
   

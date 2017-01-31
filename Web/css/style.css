@@ -6,6 +6,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/*Map Styling*/
+.map{
+  width: 150px;
+  height: 150px;
+  overflow: visible;
+}
+.coords{
+  width: 313px;
+}
 /*Image centering*/
 .logo {
     margin-bottom: -0.05em;

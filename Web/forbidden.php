@@ -4,7 +4,9 @@
 
   <meta charset="UTF-8">
   <title>My contacts</title>
-  
+  <?php
+  include ("conexion.php");
+  ?>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
   <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>

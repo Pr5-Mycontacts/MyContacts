@@ -9,6 +9,30 @@
 	<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 	<link rel="stylesheet" href="css/style.css">
 
+		<!--valida nombre y apellido-->
+		<script>
+		function validar(){
+				var error=true;
+				if(document.formulario.nombre.value==""){
+					document.formulario.nombre.style.borderColor='red';
+					error=false;
+				}
+				if(document.formulario.apellidos.value==""){
+					document.formulario.apellidos.style.borderColor='red';
+					error=false;
+				}
+				return error;
+			}
+		</script>
+
+		<!--ventana maps-->
+		<script>
+		function myFunction() {
+   		window.open("maps.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,width=400,height=400");
+		}
+		</script>
+
+
 </head>
 <?php
 include ("conexion.php");
@@ -52,22 +76,18 @@ else{
 				<option value="1">Profesional</option>
 				<option value="2">Personal</option>
 		</select>
-
-		<div id="map" class="mapa"></div>
-	    <form name="formulariomapa" action="newuser.php" method="POST" >
-	    <input type="text" name="lat_pers" id="lat_pers" placeholder="latitude" />
-	    <input type="text" name="long_pers" id="long_pers" placeholder="longitude">
-	    <input type="submit" value="Guardar">
-	    </form>
-
-		
-		
+		<a href="" onclick="myFunction()"> Busca la dirección...</a><br><br>
+		<!--por aquí... no consigo recuperar los datos....-->
+		<?php
+		include("conexion.php");
+		$lat_pers=$_POST['lat_pers'];
+		$long_pers=$_POST['long_pers'];
+		?>
 		
     	<button>Enviar</button>
     </form>
 	</div>
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlvO6QnueCJUrb3yhqmEWDVb6CeIsdOvk&callback=initMap"></script>
 	<script src="js/index.js"></script>
 
 </body>

@@ -25,13 +25,13 @@
     </head>
     <body>
     <div id="map"></div>
-    <form name="formulariomapa" action="maps.proc.php" method="GET" >
-    <input type="text" id="lati" placeholder="latitude" />
-    <input type="text" id="long" placeholder="longitude">
+    <form name="formulariomapa" action="newuser.php" method="POST" >
+    <input type="text" name="lat_pers" id="lat_pers" placeholder="latitude" />
+    <input type="text" name="long_pers" id="long_pers" placeholder="longitude">
     <input type="submit" value="Guardar">
     </form>
-    <script>
 
+    <script>
 
     var marker;          //variable del marcador
     var coords = {};    //coordenadas obtenidas con la geolocalización
@@ -53,8 +53,6 @@ initMap = function ()
           },function(error){console.log(error);});
     
 }
-
-
 
 function setMapa (coords)
 {   
@@ -83,8 +81,8 @@ function setMapa (coords)
       marker.addListener( 'dragend', function (event)
       {
         //escribimos las coordenadas de la posicion actual del marcador dentro del input #coords
-        document.getElementById("lati").value = this.getPosition().lat()
-        document.getElementById("long").value = this.getPosition().lng();
+        document.getElementById("lat_pers").value = this.getPosition().lat()
+        document.getElementById("long_pers").value = this.getPosition().lng();
       });
 }
 
@@ -98,18 +96,9 @@ function setMapa (coords)
 }
 
 // Carga de la libreria de google maps 
-  
-    </script>
+      </script>
     <!--<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap">
     </script>-->
-
-
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxZaJplj2BXzydw1vTeUhZ_Iqtt26Z0PQ&callback=initMap">
-    </script>
-
     
 </body>
 </html>
-
-
