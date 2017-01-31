@@ -13,7 +13,7 @@ $('.toggle').click(function(){
 // Map script
 //
 //
-var marker;          //variable del marcador
+var marker,map;          //variable del marcador
 var coords = {};     //coordenadas obtenidas con la geolocalización
 
 //Funcion principal mapa
@@ -37,7 +37,7 @@ initMap = function ()
 function setMapa (coords)
 {   
       //Se crea una nueva instancia del objeto mapa
-      var map = new google.maps.Map(document.getElementById('map'),
+      map = new google.maps.Map(document.getElementById('map'),
       {
         zoom: 13,
         center:new google.maps.LatLng(coords.lat,coords.lng),

@@ -47,6 +47,9 @@ else{
 		<input type="email" name="correo_profesional" id="correo_profesional" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" placeholder="Email Profesional"/>
 		<input type="tel" name="telf_personal" pattern="[0-9]{9}" placeholder="Teléfono Personal"/>
 		<input type="tel" name="telf_profesional" pattern="[0-9]{9}" placeholder="Teléfono Profesional"/>
+		
+	    
+	    
 		<select name="tipo_contacto" id="tipo_contacto" required>
 				<option value="" disabled selected hidden>Tipo de contacto</option>
 				<option value="1">Profesional</option>
@@ -54,20 +57,17 @@ else{
 		</select>
 
 		<div id="map" class="mapa"></div>
-	    <form name="formulariomapa" action="newuser.php" method="POST" >
-	    <input type="text" name="lat_pers" id="lat_pers" placeholder="latitude" />
-	    <input type="text" name="long_pers" id="long_pers" placeholder="longitude">
-	    <input type="submit" value="Guardar">
-	    </form>
-
-		
-		
-		
+		<br><br>
+	    <input type="text" disabled name="lat_pers" id="lat_pers" placeholder="latitude" readonly="readonly" />
+	    <input type="text" disabled name="long_pers" id="long_pers" placeholder="longitude" readonly="readonly" />
+	    <br>
+	
     	<button>Enviar</button>
     </form>
 	</div>
+	
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlvO6QnueCJUrb3yhqmEWDVb6CeIsdOvk&callback=initMap"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlvO6QnueCJUrb3yhqmEWDVb6CeIsdOvk&callback=initMap""></script>
 	<script src="js/index.js"></script>
 
 </body>
