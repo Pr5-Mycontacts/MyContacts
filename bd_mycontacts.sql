@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-01-2017 a las 15:47:44
+-- Tiempo de generación: 31-01-2017 a las 16:18:26
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -42,6 +42,14 @@ CREATE TABLE `tbl_contacts` (
   `usuario` varchar(30) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `tbl_contacts`
+--
+
+INSERT INTO `tbl_contacts` (`id_contacto`, `nombre`, `apellidos`, `correo_personal`, `correo_profesional`, `telf_personal`, `telf_profesional`, `lat_pers`, `lat_prof`, `long_pers`, `long_prof`, `tipo_contacto`, `usuario`) VALUES
+(16, 'David', 'Marin', 'david@gmail.com', 'dmarin@j23.fje.edu', '98765436', '98765432', '', '', '', '', 1, 'sergio@gmail.com'),
+(17, 'Agnes', 'Plans', 'agnes@gmail.com', 'aplans@joan23.fje.edu', '987898765', '987898765', '', '', '', '', 1, 'sergio@gmail.com');
+
 -- --------------------------------------------------------
 
 --
@@ -54,6 +62,15 @@ CREATE TABLE `tbl_users` (
   `recovery` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `answ_recovery` varchar(1) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `tbl_users`
+--
+
+INSERT INTO `tbl_users` (`usuario`, `password`, `recovery`, `answ_recovery`) VALUES
+('isra@gmail.com', '1234', 'kile', '2'),
+('musta@hotmail.es', '1234', 'rojo', '1'),
+('sergio@gmail.com', '1234', 'Azul', '1');
 
 --
 -- Índices para tablas volcadas
@@ -80,7 +97,7 @@ ALTER TABLE `tbl_users`
 -- AUTO_INCREMENT de la tabla `tbl_contacts`
 --
 ALTER TABLE `tbl_contacts`
-  MODIFY `id_contacto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_contacto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- Restricciones para tablas volcadas
 --
