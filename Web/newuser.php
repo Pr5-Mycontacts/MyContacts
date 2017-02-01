@@ -32,7 +32,7 @@ else{
 
 
 	<!-- Form Module-->
-	<div class="module form-module">
+	<div class="module form2-module">
 	<div class="form">
 	</div>
 	<div class="form">

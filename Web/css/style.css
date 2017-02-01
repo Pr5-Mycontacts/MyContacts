@@ -9,7 +9,6 @@ body {
 /*Map Styling*/
 #map{
 
-  width: 240px;
   height: 320px;
   overflow: visible;
 }
@@ -19,12 +18,13 @@ body {
 /*Top Bar*/
 .top-bar {
   background-color:#3297ec;
-  order-width: 2px;
+  border-width: 2px;
   border-bottom-width:2px;
   border-bottom-color:gray;
   border-bottom-style: solid;
   padding: 0px 0px 2px 20px;
   vertical-align: middle;
+  overflow-x: hidden;
 }
 /*Image centering*/
 .logo {
@@ -87,6 +87,16 @@ A:hover {text-decoration:none;color:#666666;}
 }
 
 /* Form Module */
+.form2-module {
+  position: relative;
+  background: #ffffff;
+  max-width: 640px;
+  width: 100%;
+  border-top: 5px solid #3297ec;
+  box-shadow: 0 0 3 px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
 .form-module {
   position: relative;
   background: #ffffff;
@@ -95,6 +105,20 @@ A:hover {text-decoration:none;color:#666666;}
   border-top: 5px solid #3297ec;
   box-shadow: 0 0 3 px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
+}
+.form2-module .toggle {
+  cursor: pointer;
+  position: absolute;
+  top: -0;
+  right: -0;
+  background: #3297ec;
+  width: 30px;
+  height: 30px;
+  margin: -5px 0 0;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
 }
 .form-module .toggle {
   cursor: pointer;
@@ -110,6 +134,18 @@ A:hover {text-decoration:none;color:#666666;}
   line-height: 30px;
   text-align: center;
 }
+.form2-module .toggle .tooltip {
+  position: absolute;
+  top: 5px;
+  right: -65px;
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+  width: auto;
+  padding: 5px;
+  font-size: 10px;
+  line-height: 2;
+  text-transform: uppercase;
+}
 .form-module .toggle .tooltip {
   position: absolute;
   top: 5px;
@@ -122,6 +158,16 @@ A:hover {text-decoration:none;color:#666666;}
   line-height: 2;
   text-transform: uppercase;
 }
+.form2-module .toggle .tooltip:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  display: block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid rgba(0, 0, 0, 0.6);
+}
 .form-module .toggle .tooltip:before {
   content: '';
   position: absolute;
@@ -132,12 +178,26 @@ A:hover {text-decoration:none;color:#666666;}
   border-bottom: 5px solid transparent;
   border-right: 5px solid rgba(0, 0, 0, 0.6);
 }
+.form2-module .form {
+  display: none;
+  padding: 40px;
+}
 .form-module .form {
   display: none;
   padding: 40px;
 }
+.form2-module .form:nth-child(2) {
+  display: block;
+}
 .form-module .form:nth-child(2) {
   display: block;
+}
+.form2-module h2 {
+  margin: 0 0 20px;
+  color: #3297ec;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
 }
 .form-module h2 {
   margin: 0 0 20px;
@@ -145,6 +205,19 @@ A:hover {text-decoration:none;color:#666666;}
   font-size: 18px;
   font-weight: 400;
   line-height: 1;
+}
+.form2-module input {
+  outline: none;
+  display: block;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-weight: 400;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  font-size: 12px;
 }
 .form-module input {
   outline: none;
@@ -159,10 +232,28 @@ A:hover {text-decoration:none;color:#666666;}
   transition: 0.3s ease;
   font-size: 12px;
 }
+.form2-module input:focus {
+  border: 1px solid #3297ec;
+  color: #333333;
+  font-size: 12px;
+}
 .form-module input:focus {
   border: 1px solid #3297ec;
   color: #333333;
   font-size: 12px;
+}
+.form2-module select {
+  outline: none;
+  display: block;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-weight: 400;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  font-size: 12px
 }
 .form-module select {
   outline: none;
@@ -177,19 +268,44 @@ A:hover {text-decoration:none;color:#666666;}
   transition: 0.3s ease;
   font-size: 12px
 }
+.form2-module select:focus {
+  border: 1px solid #3297ec;
+  color: #333333;
+  font-size: 12px;
+}
 .form-module select:focus {
   border: 1px solid #3297ec;
   color: #333333;
   font-size: 12px;
 }
+.form2-module select option {
+  color: #33b5e5;
+}
 .form-module select option {
   color: #33b5e5;
+}
+.form2-module select:not(:checked) {
+  color: #a9a9a9;
 }
 .form-module select:not(:checked) {
   color: #a9a9a9;
 }
+.form2-module select:checked {
+  color: green;
+}
 .form-module select:checked {
   color: green;
+}
+.form2-module button {
+  cursor: pointer;
+  background: #3297ec;
+  width: 100%;
+  border: 0;
+  padding: 10px 15px;
+  color: #ffffff;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  font-size: 12px;
 }
 .form-module button {
   cursor: pointer;
@@ -202,8 +318,20 @@ A:hover {text-decoration:none;color:#666666;}
   transition: 0.3s ease;
   font-size: 12px;
 }
+.form2-module button:hover {
+  background: #178ab4;
+}
 .form-module button:hover {
   background: #178ab4;
+}
+.form-module2 .cta {
+  background: #f2f2f2;
+  width: 100%;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  color: #666666;
+  font-size: 12px;
+  text-align: center;
 }
 .form-module .cta {
   background: #f2f2f2;
@@ -213,6 +341,10 @@ A:hover {text-decoration:none;color:#666666;}
   color: #666666;
   font-size: 12px;
   text-align: center;
+}
+.form2-module .cta a {
+  color: #333333;
+  text-decoration: none;
 }
 .form-module .cta a {
   color: #333333;
