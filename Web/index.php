@@ -43,16 +43,16 @@
   <div class="form">
     <h2>Crear una cuenta</h2>
     <form action="registro.proc.php" method="POST">
-      <input type="email" placeholder="Email"/>
-      <input type="password" placeholder="Contraseña"/>
-      <input type="password" placeholder="Repite la contraseña"/>
+      <input type="email" id="usuario" name="usuario" placeholder="Email"/>
+      <input type="password" id="password" name="password" placeholder="Contraseña"/>
+      <input type="password" name="password2" placeholder="Repite la contraseña"/>
       <select name="recovery_question">
       <option value="" disabled selected hidden>Pregunta de seguridad</option>
       <option value="1">¿Cual es tu color favorito?</option>
       <option value="2">¿Cual era el nombre de tu mejor amigo en la infancia?</option>
       <option value="3">¿Cual fue el nombre de tu primera mascota?</option>
       </select>
-      <input type="text" placeholder="Respuesta"/>
+      <input type="text" id="recovery" name="recovery" placeholder="Respuesta"/>
       <button>Registrarse</button>
     </form>
   </div>

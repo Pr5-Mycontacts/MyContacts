@@ -65,7 +65,7 @@ else{
 	</div>
 
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlvO6QnueCJUrb3yhqmEWDVb6CeIsdOvk&callback=initMap""></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlvO6QnueCJUrb3yhqmEWDVb6CeIsdOvk&callback=initMap"></script>
 	<script src="js/index.js"></script>
 
 </body>

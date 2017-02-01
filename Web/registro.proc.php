@@ -6,7 +6,7 @@ $password= $_POST['password'];
 $recovery= $_POST['recovery'];
 $answ_recovery= $_POST['answ_recovery'];
 
-$query = "INSERT INTO tbl_users(usuario, password, recovery, answ_recovery) VALUES('$usuario','$password','$recovery',$answ_recovery) ";
+$query = "INSERT INTO tbl_users(usuario, password, recovery) VALUES('$usuario','$password','$recovery') ";
 
 $resultado = $conexion->query($query);
 
@@ -15,6 +15,9 @@ if($resultado){
 	header("Location: home.php");
 }
 else{
+
 	echo "no se ha insertado";
+	sleep(5);
+	header("Location: home.php");
 }
 ?>

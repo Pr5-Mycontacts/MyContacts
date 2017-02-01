@@ -36,8 +36,8 @@ else{
 
 <?php
       include("conexion.php");
-      //consulta que filtre unicamente l usuario
-      $query="SELECT * FROM tbl_contacts WHERE usuario=$usuario";
+      $usuario=$_SESSION['usuario'];
+      $query="SELECT * FROM tbl_contacts WHERE usuario = '$usuario'";
       $resultado=$conexion->query($query);
       echo "<div class='container'>
             <div class='row'>";
@@ -48,6 +48,14 @@ echo '<div class="container">
       <div class="col-xs-4">
       <div class="card transition">
         <h2 class="transition">Contacto</h2>
+
+        <p><img src= "https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=200x100&maptype=roadmap
+&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+&markers=color:red%7Clabel:C%7C40.718217,-73.998284
+&key=AIzaSyAlvO6QnueCJUrb3yhqmEWDVb6CeIsdOvk"></img></p>
+
+
+
         <p class="p1">Nombre: '.$valores['nombre'].'</p>
         </br>
         </br>
