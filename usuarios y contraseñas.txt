@@ -1,0 +1,39 @@
+---------------------/*Usuarios web*/----------------------------
+
+usuario:
+sergio@gmail.com
+contraseña:
+1234
+
+usuario:
+musta@gmail.com
+contraseña:
+1234
+
+usuario:
+isra@gmail.com
+contraseña:
+1234
+
+-----------------------/*Hosting*/-------------------------------
+host:
+Hostinger
+
+usuario:
+8664.joan23@fje.edu
+
+contraseña:
+09c98iae
+
+-------------------------/*BD*/----------------------------------
+host bd:
+mysql.hostinger.es
+
+bd name:
+u893889399_pr05
+
+user bd:
+u893889399_usr
+
+password bd:
+qwe1234
