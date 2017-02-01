@@ -52,7 +52,7 @@ else{
       </div>
     </div>
     <div class="col-xs-4">
-      <div class="card transition.col-xs-4">
+      <div class="card transition">
         <h2 class="transition">Contacto</h2>
         <p class="p1">Nombre:</p>
         </br>
@@ -67,7 +67,7 @@ else{
       </div>
     </div>
     <div class="col-xs-4">
-      <div class="card transition.col-xs-4">
+      <div class="card transition">
         <h2 class="transition">Contacto</h2>
         <p class="p1">Nombre:</p>
         </br>
@@ -103,7 +103,7 @@ else{
       </div>
     </div>
     <div class="col-xs-4">
-      <div class="card transition.col-xs-4">
+      <div class="card transition">
         <h2 class="transition">Contacto</h2>
         <p class="p1">Nombre:</p>
         </br>
@@ -118,7 +118,7 @@ else{
       </div>
     </div>
     <div class="col-xs-4">
-      <div class="card transition.col-xs-4">
+      <div class="card transition">
         <h2 class="transition">Contacto</h2>
         <p class="p1">Nombre:</p>
         </br>
