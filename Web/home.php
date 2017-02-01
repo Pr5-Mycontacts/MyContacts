@@ -34,106 +34,42 @@ else{
   <h1><img class="logo" src="img/MyContactsLogo.png">   My Contacts</h1>
 </div>
 
-<div class="container">
+<?php
+      include("conexion.php");
+      //consulta que filtre unicamente l usuario
+      $query="SELECT * FROM tbl_contacts WHERE usuario=$usuario";
+      $resultado=$conexion->query($query);
+      echo "<div class='container'>
+            <div class='row'>";
+      while($valores= mysqli_fetch_array($resultado)){
+    
+echo '<div class="container">
   <div class="row">
-    <div class="col-xs-4">
+      <div class="col-xs-4">
       <div class="card transition">
         <h2 class="transition">Contacto</h2>
-        <p class="p1">Nombre:</p>
+        <p class="p1">Nombre: '.$valores['nombre'].'</p>
         </br>
         </br>
-        <p class="p">Apellidos:</p>
+        <p class="p">Apellidos: '.$valores['apellidos'].'</p>
         </br>
         </br>
-        <p class="p">Teléfono:</p>
+        <p class="p">Teléfono:'.$valores['telf_personal'].'</p>
+        </br>
+        </br>
+         <p class="p">Correo Personal:'.$valores['correo_personal'].'</p>
         </br>
         </br>
         <div class="card_circle transition"></div>
       </div>
-    </div>
-    <div class="col-xs-4">
-      <div class="card transition">
-        <h2 class="transition">Contacto</h2>
-        <p class="p1">Nombre:</p>
-        </br>
-        </br>
-        <p class="p">Apellidos:</p>
-        </br>
-        </br>
-        <p class="p">Teléfono:</p>
-        </br>
-        </br>
-        <div class="card_circle transition"></div>
       </div>
-    </div>
-    <div class="col-xs-4">
-      <div class="card transition">
-        <h2 class="transition">Contacto</h2>
-        <p class="p1">Nombre:</p>
-        </br>
-        </br>
-        <p class="p">Apellidos:</p>
-        </br>
-        </br>
-        <p class="p">Teléfono:</p>
-        </br>
-        </br>
-        <div class="card_circle transition"></div>
-      </div>
-    </div>
-  </div>
-</div>
-</br>
-</br>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-4">
-      <div class="card transition">
-        <h2 class="transition">Contacto</h2>
-        <p class="p1">Nombre:</p>
-        </br>
-        </br>
-        <p class="p">Apellidos:</p>
-        </br>
-        </br>
-        <p class="p">Teléfono:</p>
-        </br>
-        </br>
-        <div class="card_circle transition"></div>
-      </div>
-    </div>
-    <div class="col-xs-4">
-      <div class="card transition">
-        <h2 class="transition">Contacto</h2>
-        <p class="p1">Nombre:</p>
-        </br>
-        </br>
-        <p class="p">Apellidos:</p>
-        </br>
-        </br>
-        <p class="p">Teléfono:</p>
-        </br>
-        </br>
-        <div class="card_circle transition"></div>
-      </div>
-    </div>
-    <div class="col-xs-4">
-      <div class="card transition">
-        <h2 class="transition">Contacto</h2>
-        <p class="p1">Nombre:</p>
-        </br>
-        </br>
-        <p class="p">Apellidos:</p>
-        </br>
-        </br>
-        <p class="p">Teléfono:</p>
-        </br>
-        </br>
-        <div class="card_circle transition"></div>
-      </div>
-    </div>
-  </div>
-</div>
+
+';
+}
+echo "</div>
+  </div>";
+?>
+
 
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/index.js"></script>
