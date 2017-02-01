@@ -273,7 +273,7 @@ A:hover {text-decoration:none;color:#666666;}
     position: absolute;
     width: 450px;
 }
-h2 {
+.transition h2 {
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 24px;
