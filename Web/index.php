@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>My contacts</title>
-  
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
   <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
@@ -12,35 +12,12 @@
 
       <link rel="stylesheet" href="css/style.css">
 
-  
+
 </head>
-<?php
 
-error_reporting(0);
-session_start();
-
-//recogida con el POST
-$usuario = $_POST["usuario"];
-$password = $_POST["password"];
-include ("conexion.php");
-if(!$conexion) {
-header("Location: error.html");
-}
-	$proceso = $conexion->query("SELECT * FROM tbl_users WHERE usuario='$usuario' AND password='$password'");
-	if(mysqli_num_rows($proceso)==1){
-	//if($resultado = mysqli_fetch_array($proceso)){
-	  $_SESSION['usuario'] = $usuario;
-	  header("Location: home.php");
-	  
-	}
-	else{
-	if(isset($usuario))
-	  echo'<div class="error"> Usuario incorrecto</div>';
-	}
-?>
 
 <body>
-  
+
 <!-- Form Mixin-->
 <!-- Input Mixin-->
 <!-- Button Mixin-->
@@ -56,6 +33,7 @@ header("Location: error.html");
   </div>
   <div class="form">
     <h2>Accede a tu cuenta</h2>
+    <div id="error" class="error" style="visibility:hidden;">Datos de acceso incorrectos</div>
     <form action="" method="POST">
       <input id="usuario" name="usuario" type="email" placeholder="Email"/>
       <input id="password" name="password" type="password" placeholder="Contraseña"/>
@@ -80,6 +58,30 @@ header("Location: error.html");
   </div>
   <div class="cta"><a href="forbidden.php">He olvidado mi contraseña</a></div>
 </div>
+<?php
+
+error_reporting(0);
+session_start();
+
+//recogida con el POST
+$usuario = $_POST["usuario"];
+$password = $_POST["password"];
+include ("conexion.php");
+if(!$conexion) {
+header("Location: error.html");
+}
+	$proceso = $conexion->query("SELECT * FROM tbl_users WHERE usuario='$usuario' AND password='$password'");
+	if(mysqli_num_rows($proceso)==1){
+	//if($resultado = mysqli_fetch_array($proceso)){
+	  $_SESSION['usuario'] = $usuario;
+	  header("Location: home.php");
+
+	}
+	else{
+	if(isset($usuario)){
+  ?>
+  <script> document.getElementById('error').style.visibility='visible'</script>
+	<?php } }?>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/index.js"></script>
 
