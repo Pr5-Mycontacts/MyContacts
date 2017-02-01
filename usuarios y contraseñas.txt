@@ -15,6 +15,11 @@ isra@gmail.com
 contraseña:
 1234
 
+usuario:
+david.marin@fje.edu
+contraseña:
+1234
+
 -----------------------/*Hosting*/-------------------------------
 host:
 Hostinger
